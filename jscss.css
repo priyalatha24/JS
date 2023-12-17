@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: aqua;
+    color: black;
+    margin: 20px;
+    padding: 20px;
+    
+}
+
+body{
+    padding:100px;
+    margin: 50px;
+    align-items: center;
+    background-color: rgb(184, 159, 129);
+}
+h2{
+    color: rgb(18, 12, 5);
+}
