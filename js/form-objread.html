@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form name="signup" method="post" action="nextpg.html" onsubmit="return formsubmit()">
+       Name:<input type ="text" name="name" placeholder="Name"/>
+       Password:<input type ="password" name="password" placeholder="Password"/>
+       Re-type password<input type= "password" name="retypepassword" placeholder="Re-typepassword" />
+       <input type="submit" value="Register" />
+    </form>
+
+    <script>
+        function submit(){
+            let name = document.signup.name.value;
+            let password = document.password.value;
+            let retypepassword = document.signup.retypepassword.value;
+
+            if(name && name.length !== 0 && password && password.length < 6 && retypepassword && retypepassword === password){
+                alert("success");
+                return true;
+            }
+            else if(!name || !password || !retypepassword){
+                alert("please fil tjis form");
+                return false;
+            }
+            else if(name.length === 0){
+                alert("please enter name");
+                return false;
+            }
+            else if(password.length < 6){
+                alert("please enter valid password");
+                return false;
+            }
+            else if(retypepassword !== password){
+                alert("passwrd mismatch");
+                return false;
+            }
+            else {
+                alert("please fill the form ");
+                return false;
+            }
+        
+
+        }
+    </script>
+</body>
+</html>

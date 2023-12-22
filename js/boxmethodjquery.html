@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        .box ,.box2{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            color: white ;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="box">hello</div>
+        <div class="box2">world</div>
+        <script>
+            $(".box").click(function(){
+                $(".box2").css("visibility","visible")
+            });
+            $(".box2").on("click",function(){
+               $(".box2").css("visibility","hidden");
+               $(".box2").css("background-color","green");
+            });
+          
+            $(".box").click(function(){
+                alert("Box1");
+            });
+            $(".box2").on("click",function(){
+                alert("Box2:"+$(".box").html());
+            });
+
+            function boxClick(){
+                alert("Box1")
+            }
+        </script>
+    </body>
+    
+</body>
+</html>

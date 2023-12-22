@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            function loadData(){
+                let json = {"data" : [
+                            {"name":"Vaishali", "age":24, "gender":"Female"},
+                            {"name":"Karthik", "age":29, "gender":"Male"},
+                            {"name":"Abarna", "age":24, "gender":"Female"},
+                            {"name":"Raj", "age":27, "gender":"Male"},
+                            {"name":"Padmashri", "age":14, "gender":"Female"},
+                            {"name":"Mahendran", "age":23, "gender":"Male"},
+                            {"name":"Raghavan", "age":24, "gender":"Male"},
+                            {"name":"Krishnamurthy", "age":80, "gender":"Male"},
+                            {"name":"Venkat", "age":16, "gender":"Male"},
+                            {"name":"Vijayalakshmi", "age":79, "gender":"Female"},
+                ]}
+                let innerHTML = "";
+
+                json.data.forEach(user =>{
+                    innerHTML = `${innerHTML} <tr>
+                        <td>${user.name}</td>
+                        <td>${user.age}</td>
+                        <td>${user.gender}</td>
+                        </tr>`
+                })
+
+                //$("tbody").html = innerHTML;
+                $("tbody").append(innerHTML); //Using tag
+                //$(".tableBody").html = innerHTML; //Using class
+                //$("#test").html = innerHTML; //Using ID
+            }
+            
+        </script>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody class ="tableBody" id="test">
+                <tr>
+                    <td>
+                        Gokul
+                    </td>
+                    <td>
+                        23
+                    </td>
+                    <td>
+                        Male
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+        <script>
+            loadData();
+        </script>
+    </body>
+</html>

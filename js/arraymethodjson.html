@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+               
+
+                kidsArray = json.data.filter(x => x.age <18 && x.gender ==="female")
+                mapArray = json.data.map(user =>`${user.name} ${user.age} /${user.gender.substring(0,1).toUpperCase()}`);
+                alert(`kids ${JSON.stringify(kidsArray)}`)
+                alert(`Map ${mapArray}`)
+        }
+        arrayFilter();
+
+        function stringFuction()
+        {
+            let title ="Hello world";
+
+            console.log(`String ${title} :lower case ${title.toLowerCase()} uppercaase ${title.toUpperCase()}`)
+            console.log(`String ${title} :includes ${title.includes("world")} `)
+            console.log(`String ${title} :concat ${title.concat("Hey")}`)
+            console.log(`String ${title} :replace ${title.replace("world","india")}`)
+
+        }
+    </script>
+
+    <table>
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>gender</th></tr>
+        </thead>
+        <tbody class ="tableBody" id="test">
+            <tr>
+                <td>gokul</td>
+                <td>34</td>
+                <td>male</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        localdata();
+    </script>
+</body>
+</html>
