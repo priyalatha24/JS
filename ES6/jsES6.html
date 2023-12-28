@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let arr =[1,2,3,4,5,6]
+        let arr1=[7,8,8,9,9,7,5,2]
+        console.log(arr+arr1)
+        //console.log(...arr)
+        let mergeArr =[...arr,...arr1]
+        console.log(...mergeArr);
+
+        const add =(a,b,c,d) =>{return a+b+c+d}
+        console.log("normal add:"+add(2,5,6,7))
+        
+        const spreadAdd = (...a)=>{
+            let c = 0;
+            for(val of a){
+                c = c+val; 
+              
+            }
+            return c;
+        }
+        console.log("spread add:"+spreadAdd(2,5))
+         
+        const spreadSub = (...a)=>{
+            let c = 0;
+            for(val of a){
+                 c = val-c;
+                
+            }
+            return c;
+        }
+        console.log("spread sub:"+spreadSub(2,3))
+
+          
+        const spreadMul = (...a)=>{
+            let c = 1;
+            for(val of a){
+                c = c*val;
+            }
+            return c;
+        }
+        console.log("spread mul:"+spreadMul(5,3))
+
+        const spreadDiv = (...a)=>{
+            let c = 1;
+            for(val of a){
+                c = c/val;
+            }
+            return c;
+        }
+        console.log("spread div:"+spreadDiv(2,8))
+
+        
+        
+
+         
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
