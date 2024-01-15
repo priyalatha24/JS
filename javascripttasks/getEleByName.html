@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="ff" value="one">1
+    <input type="radio" name="ff" value="two">2
+    <input type="radio" name="ff" value="three">3
+    <button onclick="calc()" id="btn">click me</button>
+    <h3 id="output"></h3>
+
+    <script>
+        var output = document.getElementById("output");
+        var btn = document.getElementById("btn");
+
+        function calc(){
+            var a = document.getElementsByName("ff");
+            a.forEach((ff)=>{
+                if(ff.checked){
+                    output.innerText =`${"Ur ans is "+ff.value}`;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
