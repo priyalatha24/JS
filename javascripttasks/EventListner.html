@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body >
+    <button class="btn"> click me </button>
+    <p id="content"></p>
+
+    <script>
+        var textbutton = document.querySelector(".btn");
+
+        textbutton.addEventListener("mouseover",fisttask);
+        textbutton.addEventListener("mouseout",secondtask);
+        textbutton.addEventListener("click",thirdtask);
+        textbutton.addEventListener("change",fourthtask);
+        
+        textbutton.removeEventListener("change",fourthtask);
+        textbutton.removeEventListener("mouseout",secondtask);
+        function fisttask(){
+            document.querySelector("#content").innerHTML +="mouseover<br>"
+        }
+        function secondtask(){
+            document.querySelector("#content").innerHTML +="mouseout<br>"
+        }
+        function thirdtask(){
+            document.querySelector("#content").innerHTML +="click<br>"
+        }
+        function fourthtask(){
+            document.querySelector("#content").innerHTML +="change<br>"
+        }
+
+    </script>
+</body>
+</html>

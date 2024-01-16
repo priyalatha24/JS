@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for....in loop
+        const employee={
+            id:"123",
+            name:"Priya",
+            age:24
+        }
+        for (key in employee){
+            console.log(key,employee[key]);
+        }
+        //for..of loop
+        const str ="priya hello";
+        for(element of str){
+            console.log(element);
+        }
+
+        const arr =[1,2,3,4,5];
+        for(element of arr){
+            console.log(element);
+        }
+    </script>
+</body>
+</html>

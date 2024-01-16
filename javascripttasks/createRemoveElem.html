@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; font-size: 50px;">
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="removeElement()">Remove Element</button>
+    <div></div>
+    
+    <script>
+
+        function addElement(){
+            var para = document.createElement("p");
+            para.innerText = "created tag p under div";
+            document.getElementsByTagName("div")[0].appendChild(para);
+        }
+
+        function removeElement(){
+            var removepara = document.querySelector("p");
+            document.getElementsByTagName("div")[0].removeChild(removepara);
+        }
+    </script>
+</body>
+</html>

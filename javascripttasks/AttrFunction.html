@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>hello</h1>
+    <h2>welcome</h2>
+    <button onclick="addAttr()">Add Attribute</button>
+    <button onclick="removeAttr()">Remove Attribute</button>
+
+    <script>
+        function addAttr(){
+           var Attribute = document.createAttribute("class");
+           Attribute.value ="dummystyle";
+           document.getElementsByTagName("h1")[0].setAttributeNode(Attribute);
+          
+        }
+        function addAttr(){
+           var Attribute = document.createAttribute("class");
+           Attribute.value ="dummystyle";
+           document.getElementsByTagName("h2")[0].setAttributeNode(Attribute);
+
+          
+        }
+        function removeAttr(){
+            document.getElementsByTagName("h1")[0].removeAttribute("class");
+            
+        }
+        function removeAttr(){
+            document.getElementsByTagName("h2")[0].removeAttribute("class");
+            
+        }
+    </script>
+    
+</body>
+</html>

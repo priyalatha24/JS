@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" class="mypara">para1</p>
+    <p>para2</p>
+    <p class="mypara">para3</p>
+    <p>para4</p>
+    <p class="mypara">para5</p>
+    <br>
+    <a class="mypara" href="#"></a>
+    <br>
+    <button onclick="changestyle()">click me </button>
+
+    <script>
+        function changestyle(){
+             var element = document.getElementsByClassName("mypara");
+             for (var i=0;i<element.length;i++){
+                element[i].style.color="red";
+             }
+        }
+    </script>
+</body>
+</html>
