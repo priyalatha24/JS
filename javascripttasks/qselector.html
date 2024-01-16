@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="btn" id="btn">Text 1</p>
+    <p class="btn" id="btn">Text 2</p>
+    <p class="btn" id="btn">Text 3</p>
+    <p class="btn" id="btn">Text 4</p>
+    <p class="btn" id="btn">Text 5</p>
+
+    <button onclick="qselector()">qselector</button>
+    <button onclick="qselectorall()">qselectorAll</button>
+
+    <script>
+        function qselector(){
+            document.querySelector(".btn").style.backgroundColor="red";
+        }
+
+        function qselectorall(){
+            var alltext=document.querySelectorAll("#btn");
+            for(var i=0;i<alltext.length;i++){
+                alltext[i].style.backgroundColor="yellow";
+            }
+        }
+    </script>
+</body>
+</html>
