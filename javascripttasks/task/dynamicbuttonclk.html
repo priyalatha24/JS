@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="btn()">Add Hello</button>
+    <h1 id="h1tag"></h1>
+    <div id="container"> </div>
+
+    <script>
+
+         var dynamicbtn = document.getElementById("h1tag")
+       
+         function btn(){
+            //create new element
+            var listitem = document.createElement("h2")
+            listitem.textContent="hello"
+            dynamicbtn.append (listitem) 
+
+         }
+
+    </script>
+</body> 
+</html>
